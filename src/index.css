@@ -1,0 +1,97 @@
+* {
+  /* The star (*) means that we grab every element in the DOM and apply styling to it. In this case, I remove every default margin on every element that I use */
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: rgba(43, 28, 35, 0.863);
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding-block: 10px;
+  z-index: 1;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.link {
+  color: white;
+  font-family: "Spirax", sans-serif;
+  font-size: 25px;
+  /* margin-inline: 10px; */
+  text-decoration: none;
+}
+
+section {
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  /* vh is a css unit and stands for viewport height */
+  height: 100vh;
+}
+
+/* This is a more advanced selector, it grabs every h1 tag that is a child element of an article tag */
+article h1 {
+  color: darkred;
+  font-family: "Spirax", sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+/* This grabs every p tag that is a child element of an article tag */
+article p {
+  background-color: rgb(139, 0, 0, 0.7);
+  margin-block: 20px;
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+}
+
+article {
+  color: white;
+  font-family: "Poiret One", sans-serif;
+}
+
+#hot {
+  background-image: url(assets/hot.jpg);
+}
+
+#juicy {
+  background-image: url(assets/juicy.jpg);
+}
+
+#cosy {
+  background-image: url(assets/cosy.jpg);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  background-color: rgb(0, 0, 0, 0.7);
+  padding: 10px 40px;
+}
+
+.p-1 {
+  right: 60px;
+}
+
+.p-2 {
+  left: 60px;
+}
+
+#hot,
+#juicy {
+  border-bottom: 10px solid rgb(139, 0, 0, 0.7);
+}
