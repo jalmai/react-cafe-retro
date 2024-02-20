@@ -22,7 +22,7 @@ export function Navbar() {
     <nav className="navbar">
       {links.map((link) => {
         return (
-          <a key={link.id} href={link.path}>
+          <a key={link.id} className="link" href={link.path}>
             {link.name}
           </a>
         );
