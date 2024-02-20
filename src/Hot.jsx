@@ -1,10 +1,5 @@
-import { useState } from "react";
 import { Box } from "./Box.jsx";
 export function Hot() {
-  const [data, setData] = useState("");
-  const boxContent = () => {
-    setData("This is data from the parent");
-  };
   return (
     <section id="hot">
       <article>
@@ -16,10 +11,10 @@ export function Hot() {
         <Box
           item={{
             article: [
-              { name: "Mocha Latte", price: "€ 7.50" },
-              { name: "Caffe Formaggio", price: "€ 5.00" },
-              { name: "Espresso", price: "€ 3.50" },
-              { name: "Chai Verde Latte", price: "€ 5.50" },
+              { id: 1, name: "Mocha Latte", price: "€ 7.50" },
+              { id: 2, name: "Caffe Formaggio", price: "€ 5.00" },
+              { id: 3, name: "Espresso", price: "€ 3.50" },
+              { id: 4, name: "Chai Verde Latte", price: "€ 5.50" },
             ],
           }}
         />

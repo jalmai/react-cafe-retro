@@ -1,3 +1,4 @@
+import { Box } from "./Box.jsx";
 export function Juicy() {
   return (
     <section id="juicy">
@@ -7,18 +8,15 @@ export function Juicy() {
         <p className="p-2">
           It's as simple as that. Chunky or smooth - it's your choice.
         </p>
-        <div className="box">
-          <div className="row">
-            <span>Branched Apricots</span>
-            <span>€ 4.20</span>
-          </div>
-          <div className="row">
-            <span> Deep Rasberries</span> <span>€ 3.50</span>
-          </div>
-          <div className="row">
-            <span>Smooth Oranges</span> <span>€ 6.50</span>
-          </div>
-        </div>
+        <Box
+          item={{
+            article: [
+              { id: 1, name: "Branched Apricots", price: "€ 4.20" },
+              { id: 2, name: "Deep Rasberries", price: "€ 3.50" },
+              { id: 3, name: "Smooth Oranges", price: "€6.50" },
+            ],
+          }}
+        />
       </article>
     </section>
   );
