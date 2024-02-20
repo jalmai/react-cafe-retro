@@ -1,4 +1,10 @@
+import { useState } from "react";
+import { Box } from "./Box.jsx";
 export function Hot() {
+  const [data, setData] = useState("");
+  const boxContent = () => {
+    setData("This is data from the parent");
+  };
   return (
     <section id="hot">
       <article>
@@ -7,21 +13,16 @@ export function Hot() {
           Hot freshly ground black coffee or a cup of exquisite tea?
         </p>
         <p className="p-2">We give you that perfect cup every time.</p>
-        <div className="box">
-          <div className="row">
-            <span>Mocha Latte</span>
-            <span>€ 7.50</span>
-          </div>
-          <div className="row">
-            <span>Caffe Formaggio</span> <span>€ 5.00</span>
-          </div>
-          <div className="row">
-            <span>Espresso</span> <span>€ 3.50</span>
-          </div>
-          <div className="row">
-            <span>Chai Verde Latte</span> <span>€ 5.50</span>
-          </div>
-        </div>
+        <Box
+          item={{
+            article: [
+              { name: "Mocha Latte", price: "€ 7.50" },
+              { name: "Caffe Formaggio", price: "€ 5.00" },
+              { name: "Espresso", price: "€ 3.50" },
+              { name: "Chai Verde Latte", price: "€ 5.50" },
+            ],
+          }}
+        />
       </article>
     </section>
   );
